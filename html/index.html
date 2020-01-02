@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="./../css/demo-transition.css">
+</head>
+<body>
+	 <div class="box demo-1">
+
+	</div>
+	<div class="box demo-2">
+		<div class="cell"></div>
+	</div> 
+	<div class="box demo-3">
+		
+	</div>
+</body>
+<script>	
+	let runend = ()=>{console.log('runend')};	
+	let $loading = document.querySelector('.demo-1');	
+	$loading.addEventListener('transitionend',runend)
+	
+</script>
+</html>

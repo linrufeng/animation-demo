@@ -1,0 +1,92 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+}
+
+.demo-1 {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+.demo-1:hover {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.demo-2 {
+  margin-top: 10px;
+}
+
+.demo-2:hover .cell {
+  -webkit-animation: move 2s linear 2 alternate running;
+          animation: move 2s linear 2 alternate running;
+}
+
+.demo-2 .cell {
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+
+@-webkit-keyframes move {
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+
+@keyframes move {
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+
+.demo-3 {
+  margin: 40px auto;
+  border-radius: 50%;
+  -webkit-animation: jump 1s cubic-bezier(0.41, -0.04, 0.93, 0.29) infinite alternate;
+          animation: jump 1s cubic-bezier(0.41, -0.04, 0.93, 0.29) infinite alternate;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  90% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+            clip-path: ellipse(50% 50% at 50% 50%);
+  }
+  100% {
+    -webkit-transform: translateY(210px);
+            transform: translateY(210px);
+    -webkit-clip-path: ellipse(50% 45% at 50% 48%);
+            clip-path: ellipse(50% 45% at 50% 48%);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  90% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+            clip-path: ellipse(50% 50% at 50% 50%);
+  }
+  100% {
+    -webkit-transform: translateY(210px);
+            transform: translateY(210px);
+    -webkit-clip-path: ellipse(50% 45% at 50% 48%);
+            clip-path: ellipse(50% 45% at 50% 48%);
+  }
+}

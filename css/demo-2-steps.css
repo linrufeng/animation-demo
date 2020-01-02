@@ -1,0 +1,48 @@
+.loading {
+  width: 108px;
+  height: 108px;
+  background: url(./i/loading.png) no-repeat;
+  border-radius: 50%;
+  -webkit-animation: round 1s steps(12) 3;
+          animation: round 1s steps(12) 3;
+}
+
+.tuzi {
+  width: 200px;
+  height: 200px;
+  -webkit-animation: run 0.2s steps(6) infinite;
+          animation: run 0.2s steps(6) infinite;
+  background: url(./i/tuzi.png) no-repeat;
+}
+
+@-webkit-keyframes round {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes round {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes run {
+  50% {
+    background-position-x: -1200px;
+  }
+  100% {
+    background-position-x: -2400px;
+  }
+}
+
+@keyframes run {
+  50% {
+    background-position-x: -1200px;
+  }
+  100% {
+    background-position-x: -2400px;
+  }
+}
